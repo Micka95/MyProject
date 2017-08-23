@@ -1,0 +1,29 @@
+{% extends "@LddtMain/n2.html.twig" %}
+{% block n3 %}
+    <!-- Template Niveau 3 -->
+    <div class="row well">
+
+
+
+
+            <div class="col-lg-3 col-lg-offset-1">
+                <h2>Modification du dessin {{ draw.title | upper }} </h2>
+                <img class="img-responsive"
+                     src="{{ asset(draw.pic.getWebPath ) }}" />
+            </div>
+
+            <div class="col-lg-5 col-lg-offset-1">
+                <!-- Template Formulaire -->
+                {% include'LddtMainBundle:Default/Partials:form_draw.html.twig' %}
+
+                <!-- Fin Template Formulaire -->
+                <!-- Si le visiteur n'est pas identifié -->
+                <!-- <p>Merci de vous<a href="#"> indentifier</a>  pour poster vos dessins !</p> -->
+
+
+            </div>
+
+
+
+    </div><!-- Fin Template Niveau 3 -->
+{% endblock n3 %}
